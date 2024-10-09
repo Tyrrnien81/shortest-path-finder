@@ -115,6 +115,43 @@ If you'd like to contribute, please fork the repository, make your changes in a 
     ```
 6. Submit a pull request on GitHub.
 
+## How to Exclude the `lib` Folder Contents When Pushing to the Remote Repository
+
+If you want to push your local repository to a remote repository while excluding the contents of the `lib` folder (but keeping an empty `lib` folder), follow these steps:
+
+1. **Edit the `.gitignore` file**: Open the `.gitignore` file in the root directory of your repository. Add the following lines to exclude all files within the `lib` folder, but keep the folder itself:
+
+    ```plaintext
+    lib/*
+    !lib/.gitkeep
+    ```
+
+    This configuration will ignore all files inside `lib` but will allow a placeholder file (`.gitkeep`) to be tracked, so the folder can be pushed as empty.
+
+2. **Create the `.gitkeep` file**: To ensure the `lib` folder itself is included in the push, add a `.gitkeep` file within it. You can do this by running:
+
+    ```bash
+    touch lib/.gitkeep
+    ```
+
+3. **Remove the existing `lib` folder contents from the remote repository**: If the remote repository already has files in the `lib` folder, you¡¯ll need to remove them. Use the following commands to remove these files from tracking, then commit the changes:
+
+    ```bash
+    git rm -r --cached lib
+    git add .
+    git commit -m "Remove lib contents and keep empty folder"
+    ```
+
+    This process removes the `lib` folder contents from the staging area so that the changes can be pushed to the remote repository.
+
+4. **Push the changes to the remote repository**: Finally, push the committed changes to the remote repository:
+
+    ```bash
+    git push origin main
+    ```
+
+After completing these steps, the remote repository will have an empty `lib` folder, while the contents remain locally but are ignored from future pushes.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
