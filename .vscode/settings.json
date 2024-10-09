@@ -1,17 +1,19 @@
 {
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\junit5.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\junit5fx.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.base.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.controls.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.fxml.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.graphics.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.media.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.swing.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx.web.jar",
-        "c:\\Users\\June\\Desktop\\VSCode\\javafx-sdk-21.0.2\\lib\\javafx-swt.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/*.jar",
+            "lib/javafx-swt.jar",
+            "lib/javafx.base.jar",
+            "lib/javafx.controls.jar",
+            "lib/javafx.fxml.jar",
+            "lib/javafx.graphics.jar",
+            "lib/javafx.media.jar",
+            "lib/javafx.swing.jar",
+            "lib/javafx.web.jar",
+            "lib/junit5.jar",
+            "lib/junit5fx.jar"
+        ]
+    }
 }
